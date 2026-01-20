@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>几何之美 - 勾股定理</title>
+
+    <!-- 引入 KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Times New Roman', "楷体", serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.8;
+            margin: 0;
+            /* 建议设为0，让导航栏顶住边缘 */
+            padding: 0;
+            /* 改为0 */
+        }
+
+        /* 统一导航栏样式 */
+        .top-nav {
+            background: #2c3e50;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        .proof-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .math-block {
+            background: #fdfdfd;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. 导航栏放在这里：所有内容的最上方 -->
+    <nav class="top-nav">
+        <a href="/" style="color: white; margin: 0 15px; text-decoration: none;">🏠 首页</a>
+        <a href="/math" style="color: white; margin: 0 15px; text-decoration: none;">📐 数学实验</a>
+        <a href="/geometry" style="color: white; margin: 0 15px; text-decoration: none;">💎 几何之美</a>
+    </nav>
+
+    <!-- 2. 主体内容 -->
+    <div class="container">
+        <!-- 这里的返回首页可以保留，也可以删掉，因为顶部已经有了 -->
+        <a href="/" class="nav-link">← 返回首页</a>
+
+        <h1>勾股定理的几何奥秘</h1>
+
+        <p>在直角三角形中，两条直角边的平方和等于斜边的平方。如果我们用 \(a\) 和 \(b\) 代表直角边，用 \(c\) 代表斜边，那么：</p>
+
+        <div class="math-block">
+            \[ a^2 + b^2 = c^2 \]
+        </div>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Pythagoras-proof-anim.svg/300px-Pythagoras-proof-anim.svg.png"
+            alt="勾股定理证明图" class="proof-image">
+
+        <p style="text-align: center; font-size: 0.9em; color: #666;">图：基于面积重组的勾股定理证明过程</p>
+
+        <h3>代数证明简述</h3>
+        <p>考虑一个边长为 \((a+b)\) 的大正方形，内部包含四个全等的直角三角形和一个边长为 \(c\) 的小正方形：</p>
+
+        <div class="math-block">
+            1. 大正方形的面积可以表示为：
+            \[ S = (a+b)^2 = a^2 + 2ab + b^2 \]
+
+            2. 同时，大正方形面积也等于四个三角形加中间小正方形：
+            \[ S = 4 \times \left( \frac{1}{2}ab \right) + c^2 = 2ab + c^2 \]
+
+            3. 令两者相等：
+            \[ a^2 + 2ab + b^2 = 2ab + c^2 \]
+
+            4. 消去两边的 \(2ab\)，我们得到：
+            \[ a^2 + b^2 = c^2 \]
+        </div>
+
+        <p>这就是几何与代数交织出的最美旋律之一。</p>
+    </div>
+
+</body>
+
+</html>
