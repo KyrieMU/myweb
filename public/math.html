@@ -4,18 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>数学实验室</title>
-    <!-- 引入优美的 KaTeX 数学公式库 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
         onload="renderMathInElement(document.body);"></script>
     <style>
         body {
+            margin: 0;
+            /* 必须设为0，导航栏才能贴边 */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 50px;
             line-height: 1.6;
             color: #333;
             background: #fafafa;
+        }
+
+        /* 导航栏样式 */
+        .top-nav {
+            background: #2c3e50;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            /* 和下方卡片保持距离 */
         }
 
         .card {
@@ -24,7 +34,8 @@
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             max-width: 800px;
-            margin: auto;
+            margin: 0 auto 40px;
+            /* 居中并留出底部距离 */
         }
 
         h1 {
@@ -41,7 +52,7 @@
             font-size: 1.2em;
         }
 
-        a {
+        .back-link {
             color: #3498db;
             text-decoration: none;
             display: block;
@@ -52,12 +63,19 @@
 </head>
 
 <body>
+
+    <!-- 1. 导航栏：所有内容的最上方 -->
+    <nav class="top-nav">
+        <a href="/" style="color: white; margin: 0 15px; text-decoration: none;">🏠 首页</a>
+        <a href="/math" style="color: white; margin: 0 15px; text-decoration: none;">📐 数学实验</a>
+        <a href="/geometry" style="color: white; margin: 0 15px; text-decoration: none;">💎 几何之美</a>
+    </nav>
+
     <div class="card">
         <h1>我的优美数学实验室 🔬</h1>
         <p>这是我的第二个页面，展示一个伟大的数学公式：</p>
 
         <div class="formula">
-            <!-- 这里写 LaTeX 公式 -->
             \[ \int_{a}^{b} f(x) dx = F(b) - F(a) \]
         </div>
 
@@ -66,8 +84,9 @@
             \[ e^{i\pi} + 1 = 0 \]
         </div>
 
-        <a href="/">← 返回主页</a>
+        <a href="/" class="back-link">← 返回主页</a>
     </div>
+
 </body>
 
 </html>
