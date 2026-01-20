@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>数学实验室</title>
+    <!-- 引入优美的 KaTeX 数学公式库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 50px;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .formula {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>我的优美数学实验室 🔬</h1>
+        <p>这是我的第二个页面，展示一个伟大的数学公式：</p>
+
+        <div class="formula">
+            <!-- 这里写 LaTeX 公式 -->
+            \[ \int_{a}^{b} f(x) dx = F(b) - F(a) \]
+        </div>
+
+        <p>还有著名的欧拉恒等式：</p>
+        <div class="formula">
+            \[ e^{i\pi} + 1 = 0 \]
+        </div>
+
+        <a href="/">← 返回主页</a>
+    </div>
+</body>
+
+</html>
