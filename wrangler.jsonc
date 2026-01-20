@@ -1,0 +1,8 @@
+{
+    "name": "mathszu",
+    "compatibility_date": "2025-01-20",
+    "assets": {
+        "directory": "./public",
+        "binding": "ASSETS"
+    }
+}
